@@ -31,7 +31,6 @@ namespace SEModCreateTool
                 const string dstPath2 = @"";
 #else
                 const string dstPath2 = @"Easy_Survival x 10\Data";
-//                const string dstFilename = @"Blueprints.sbc";
 #endif
                 this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, false);
             }
@@ -42,7 +41,6 @@ namespace SEModCreateTool
                 const string dstPath2 = @"";
 #else
                 const string dstPath2 = @"Easy_Survival x 100\Data";
-//                const string dstFilename = @"Blueprints.sbc";
 #endif
                 this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, false);
             }
@@ -54,12 +52,32 @@ namespace SEModCreateTool
                 const string dstPath2 = @"";
 #else
                 const string dstPath2 = @"Easy_Survival x 1000\Data";
-//                const string dstFilename = @"Blueprints.sbc";
 #endif
                 this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, false);
             }
 
 
+            {
+                const Decimal factor = 10.0M;
+                string dstFilename = @$"Blueprints_{factor.ToString("0")}_Only_Quantity.sbc";
+#if DEBUG
+                const string dstPath2 = @"";
+#else
+                const string dstPath2 = @"Easy_Survival x 10 Only Quantity\Data";
+#endif
+                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, true);
+            }
+
+            {
+                const Decimal factor = 100.0M;
+                string dstFilename = @$"Blueprints_{factor.ToString("0")}_Only_Quantity.sbc";
+#if DEBUG
+                const string dstPath2 = @"";
+#else
+                const string dstPath2 = @"Easy_Survival x 100 Only Quantity\Data";
+#endif
+                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, true);
+            }
 
             {
                 const Decimal factor = 1000.0M;
@@ -67,8 +85,7 @@ namespace SEModCreateTool
 #if DEBUG
                 const string dstPath2 = @"";
 #else
-                const string dstPath2 = @"Easy_Survival_Only_Quantity\Data";
-//                const string dstFilename = @"Blueprints.sbc";
+                const string dstPath2 = @"Easy_Survival x 1000 Only Quantity\Data";
 #endif
                 this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, true);
             }
