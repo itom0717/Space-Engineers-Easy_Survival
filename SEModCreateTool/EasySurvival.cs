@@ -19,7 +19,23 @@ namespace SEModCreateTool
         /// </summary>
         /// <param name="srcPath"></param>
         /// <param name="dstPath"></param>
-        public void Create(string srcPath, string dstPath1)
+        public void Create(string srcPath, string dstPath)
+        {
+            //Blueprints
+            this.CreateBlueprints(srcPath, dstPath);
+
+            //CubeBlocks_Production
+            this.CreateCubeBlocksProduction(srcPath, dstPath);
+
+
+        }
+
+
+
+        /// <summary>
+        /// Blueprints
+        /// </summary>
+        private void CreateBlueprints(string srcPath, string dstPath)
         {
 
             string srcFile = System.IO.Path.Combine(srcPath, "Blueprints.sbc");
@@ -32,7 +48,7 @@ namespace SEModCreateTool
 #else
                 const string dstPath2 = @"Easy_Survival x 10\Data";
 #endif
-                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, false);
+                this.CreateBlueprintsSbc(srcFile, dstPath, dstPath2, dstFilename, factor, true, false);
             }
             {
                 const Decimal factor = 100.0M;
@@ -42,7 +58,7 @@ namespace SEModCreateTool
 #else
                 const string dstPath2 = @"Easy_Survival x 100\Data";
 #endif
-                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, false);
+                this.CreateBlueprintsSbc(srcFile, dstPath, dstPath2, dstFilename, factor, true, false);
             }
 
             {
@@ -53,7 +69,7 @@ namespace SEModCreateTool
 #else
                 const string dstPath2 = @"Easy_Survival x 1000\Data";
 #endif
-                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, false);
+                this.CreateBlueprintsSbc(srcFile, dstPath, dstPath2, dstFilename, factor, true, false);
             }
 
 
@@ -65,7 +81,7 @@ namespace SEModCreateTool
 #else
                 const string dstPath2 = @"Easy_Survival x 10 Only Quantity\Data";
 #endif
-                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, true);
+                this.CreateBlueprintsSbc(srcFile, dstPath, dstPath2, dstFilename, factor, true, true);
             }
 
             {
@@ -76,7 +92,7 @@ namespace SEModCreateTool
 #else
                 const string dstPath2 = @"Easy_Survival x 100 Only Quantity\Data";
 #endif
-                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, true);
+                this.CreateBlueprintsSbc(srcFile, dstPath, dstPath2, dstFilename, factor, true, true);
             }
 
             {
@@ -87,7 +103,7 @@ namespace SEModCreateTool
 #else
                 const string dstPath2 = @"Easy_Survival x 1000 Only Quantity\Data";
 #endif
-                this.CreateBlueprintsSbc(srcFile, dstPath1, dstPath2, dstFilename, factor, true, true);
+                this.CreateBlueprintsSbc(srcFile, dstPath, dstPath2, dstFilename, factor, true, true);
             }
 
         }
@@ -461,11 +477,206 @@ namespace SEModCreateTool
                     item.SetAttribute("SubtypeId", "Uranium");
                     result.AppendChild(item);
                 }
+            }
+        }
 
 
+        /// <summary>
+        /// CubeBlocksProduction
+        /// </summary>
+        private void CreateCubeBlocksProduction(string srcPath, string dstPath)
+        {
+            string srcFile = System.IO.Path.Combine(srcPath, "CubeBlocks", "CubeBlocks_Production.sbc");
 
+            {
+                const decimal factor = 10.0M;
+                string dstFilename = @$"OxygenGenerator_{factor.ToString("0")}.sbc";
+#if DEBUG
+                const string dstPath2 = @"";
+#else
+                const string dstPath2 = @$"Easy_Survival OxygenGenerator x 10\Data";
+#endif
+                this.CreateOxygenGeneratorSbc(srcFile, dstPath, dstPath2, dstFilename, factor);
             }
 
+            {
+                const decimal factor = 100.0M;
+                string dstFilename = @$"OxygenGenerator_{factor.ToString("0")}.sbc";
+#if DEBUG
+                const string dstPath2 = @"";
+#else
+                const string dstPath2 = @$"Easy_Survival OxygenGenerator x 100\Data";
+#endif
+                this.CreateOxygenGeneratorSbc(srcFile, dstPath, dstPath2, dstFilename, factor);
+            }
+
+            {
+                const decimal factor = 1000.0M;
+                string dstFilename = @$"OxygenGenerator_{factor.ToString("0")}.sbc";
+#if DEBUG
+                const string dstPath2 = @"";
+#else
+                const string dstPath2 = @$"Easy_Survival OxygenGenerator x 1000\Data";
+#endif
+                this.CreateOxygenGeneratorSbc(srcFile, dstPath, dstPath2, dstFilename, factor);
+            }
+
+
+        }
+
+
+        /// <summary>
+        ///データ加工
+        /// </summary>
+        /// <param name="srcPath"></param>
+        /// <param name="dstPath"></param>
+        public void CreateOxygenGeneratorSbc(string srcFile,
+                                             string dstPath1,
+                                             string dstPath2,
+                                             string dstFilename,
+                                             decimal factor)
+        {
+            //出力フォルダ
+            string dstPath = System.IO.Path.Combine(dstPath1, dstPath2);
+            if (!System.IO.Directory.Exists(dstPath))
+            {
+                System.IO.Directory.CreateDirectory(dstPath);
+            }
+            //出力ファイル
+            string dstFile = System.IO.Path.Combine(dstPath, dstFilename);
+
+            //Org Xml
+            XmlDocument srcXmlDoc = new XmlDocument();
+            srcXmlDoc.Load(srcFile);
+
+            //保存XML
+            XmlDocument dstXmlDoc = new XmlDocument();
+
+            // XML宣言の生成
+            {
+                XmlDeclaration declaration = dstXmlDoc.CreateXmlDeclaration(@"1.0", @"", null);
+                dstXmlDoc.AppendChild(declaration);
+            }
+
+            //Definitions
+            XmlNode? nodeDefinition = null;
+            {
+                XmlNodeList? nodeList = srcXmlDoc.SelectNodes("/Definitions");
+                if (nodeList == null)
+                {
+                    return;
+                }
+                foreach (XmlNode node in nodeList)
+                {
+                    nodeDefinition = dstXmlDoc.ImportNode(node, false);
+                    dstXmlDoc.AppendChild(nodeDefinition);
+                    break;
+                }
+            }
+            if (nodeDefinition == null)
+            {
+                return;
+            }
+
+            //CubeBlocks
+            XmlNode? nodeCubeBlocks = null;
+            {
+                XmlNodeList? nodeList = srcXmlDoc.SelectNodes("/Definitions/CubeBlocks");
+                if (nodeList == null)
+                {
+                    return;
+                }
+                foreach (XmlNode node in nodeList)
+                {
+                    nodeCubeBlocks = dstXmlDoc.ImportNode(node, false);
+                    nodeDefinition.AppendChild(nodeCubeBlocks);
+                    break;
+                }
+            }
+            if (nodeCubeBlocks == null)
+            {
+                return;
+            }
+
+
+
+            //対象SubtypeIdをリストアップ
+            var tgIds = new SortedDictionary<string, bool>();
+            tgIds.Add("OxygenGenerator\t", true);
+            tgIds.Add("OxygenGenerator\tOxygenGeneratorSmall",true);
+
+
+            //CubeBlocks
+            {
+                XmlNodeList? nodeList = srcXmlDoc.SelectNodes("/Definitions/CubeBlocks/Definition");
+                if (nodeList == null)
+                {
+                    return;
+                }
+                foreach (XmlNode node in nodeList)
+                {
+                    //TypeIdを取得
+                    var typeId = node.SelectSingleNode("Id/TypeId")?.InnerText.ToString();
+                    if (string.IsNullOrWhiteSpace(typeId))
+                    {
+                        typeId = "";
+                    }
+                    if(string.IsNullOrWhiteSpace(typeId))
+                    {
+                        //対象外のtypeId
+                        continue;
+                    }
+                    //SubtypeIdを取得
+                    var subtypeId = node.SelectSingleNode("Id/SubtypeId")?.InnerText.ToString();
+                    if (string.IsNullOrWhiteSpace(subtypeId))
+                    {
+                        subtypeId = "";
+                    }
+
+
+                    //対象外のtypeId+subtypeIdか判定
+                    if (!tgIds.ContainsKey($"{typeId}\t{subtypeId}"))
+                    {
+                        //対象外のtypeId+subtypeId
+                        continue;
+                    }
+
+                    //要素を取り込み
+                    XmlNode nodeCubeBlock = dstXmlDoc.ImportNode(node, true);
+
+
+
+                    XmlNodeList? nodeListIceToGasRatio = nodeCubeBlock.SelectNodes("ProducedGases/GasInfo/IceToGasRatio");
+                    if (nodeListIceToGasRatio == null || nodeListIceToGasRatio.Count <= 0)
+                    {
+                        continue;
+                    }
+
+                    //出力週を調整
+                    foreach (XmlNode gasRateNode in nodeListIceToGasRatio)
+                    {
+                        string valueText = gasRateNode.InnerText;
+                        if (string.IsNullOrWhiteSpace(valueText))
+                        {
+                            continue;
+                        }
+
+                        decimal gasRate;
+                        if (decimal.TryParse(valueText, out gasRate))
+                        {
+                            gasRate = gasRate * factor;
+                            gasRateNode.InnerText = ((double)gasRate).ToString();
+                        }
+                    }
+
+                    //追加
+                    nodeCubeBlocks.AppendChild(nodeCubeBlock);
+
+                }
+            }
+
+            //XML保存
+            dstXmlDoc.Save(dstFile);
         }
     }
 }
