@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="~%24生成.xlsx" />
+    <None Remove="生成.xlsx" />
+  </ItemGroup>
+
 </Project>
