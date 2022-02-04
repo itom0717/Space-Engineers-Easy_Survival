@@ -37,9 +37,9 @@
       <EdgeType>Light</EdgeType>
       <BuildTimeSeconds>40</BuildTimeSeconds>
       <ResourceSourceGroup>Battery</ResourceSourceGroup>
-      <MaxPowerOutput>1200</MaxPowerOutput>
+      <MaxPowerOutput>12</MaxPowerOutput>
       <ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
-      <RequiredPowerInput>1200</RequiredPowerInput>
+      <RequiredPowerInput>12</RequiredPowerInput>
       <AdaptibleInput>true</AdaptibleInput>
       <MaxStoredPower>300</MaxStoredPower>
       <InitialStoredPowerRatio>1.0</InitialStoredPowerRatio>
@@ -59,6 +59,9 @@
       <IsAirTight>true</IsAirTight>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
+      <TargetingGroups>
+        <string>PowerSystems</string>
+      </TargetingGroups>
     </Definition>
     <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
       <Id>
@@ -95,9 +98,9 @@
       <EdgeType>Light</EdgeType>
       <BuildTimeSeconds>20</BuildTimeSeconds>
       <ResourceSourceGroup>Battery</ResourceSourceGroup>
-      <MaxPowerOutput>400</MaxPowerOutput>
+      <MaxPowerOutput>4</MaxPowerOutput>
       <ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
-      <RequiredPowerInput>400</RequiredPowerInput>
+      <RequiredPowerInput>4</RequiredPowerInput>
       <MaxStoredPower>100</MaxStoredPower>
       <InitialStoredPowerRatio>1.0</InitialStoredPowerRatio>
       <RechargeMultiplier>80</RechargeMultiplier>
@@ -116,6 +119,9 @@
       <IsAirTight>false</IsAirTight>
       <MirroringZ>Y</MirroringZ>
       <MirroringY>Z</MirroringY>
+      <TargetingGroups>
+        <string>PowerSystems</string>
+      </TargetingGroups>
     </Definition>
     <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
       <Id>
@@ -153,9 +159,9 @@
       <EdgeType>Light</EdgeType>
       <BuildTimeSeconds>8</BuildTimeSeconds>
       <ResourceSourceGroup>Battery</ResourceSourceGroup>
-      <MaxPowerOutput>20</MaxPowerOutput>
+      <MaxPowerOutput>0.2</MaxPowerOutput>
       <ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
-      <RequiredPowerInput>20</RequiredPowerInput>
+      <RequiredPowerInput>0.2</RequiredPowerInput>
       <MaxStoredPower>5</MaxStoredPower>
       <InitialStoredPowerRatio>1.0</InitialStoredPowerRatio>
       <RechargeMultiplier>80</RechargeMultiplier>
@@ -172,6 +178,9 @@
       <EmissiveColorPreset>Extended</EmissiveColorPreset>
       <IsAirTight>true</IsAirTight>
       <PCU>15</PCU>
+      <TargetingGroups>
+        <string>PowerSystems</string>
+      </TargetingGroups>
     </Definition>
   </CubeBlocks>
 </Definitions>

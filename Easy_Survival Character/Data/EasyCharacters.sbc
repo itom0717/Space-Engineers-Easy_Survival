@@ -399,6 +399,7 @@
       <AnkleHeightWhileStanding>0.187</AnkleHeightWhileStanding>
       <RecoilJetpackDampeningDegPerS>30</RecoilJetpackDampeningDegPerS>
       <CrouchHeadServerOffset>1.25</CrouchHeadServerOffset>
+      <HeadServerOffset>1.4</HeadServerOffset>
     </Character>
     <Character>
       <Id>
