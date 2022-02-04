@@ -114,6 +114,69 @@ namespace SEModCreateTool
         }
 
 
+        /// <summary>
+        /// valueを変更
+        /// </summary>
+        protected void ChangeValue(XmlDocument tgtXmlDoc, string xPath, string value)
+        {
+            XmlNodeList? nodeList = tgtXmlDoc.SelectNodes(xPath);
+            if (nodeList == null || nodeList.Count <= 0)
+            {
+                return;
+            }
+
+            foreach (XmlNode node in nodeList)
+            {
+                node.InnerText = value;
+            }
+        }
+
+
+        /// <summary>
+        /// valueを変更(値直接指定)
+        /// </summary>
+        protected void ChangeValue(XmlNode tgtNode, string xPath, string value)
+        {
+            XmlNodeList? nodeList = tgtNode.SelectNodes(xPath);
+            if (nodeList == null || nodeList.Count <= 0)
+            {
+                return;
+            }
+
+            foreach (XmlNode node in nodeList)
+            {
+                node.InnerText = value;
+            }
+        }
+
+        /// valueを変更(係数指定)
+        /// </summary>
+        protected void ChangeValue(XmlNode tgtNode, string xPath, decimal factor)
+        {
+            XmlNodeList? nodeList = tgtNode.SelectNodes(xPath);
+            if (nodeList == null || nodeList.Count <= 0)
+            {
+                return;
+            }
+
+
+            foreach (XmlNode node in nodeList)
+            {
+                string valueText = node.InnerText;
+                if (string.IsNullOrWhiteSpace(valueText))
+                {
+                    continue;
+                }
+
+                decimal value;
+                if (decimal.TryParse(valueText, out value))
+                {
+                    value = value * factor;
+                    node.InnerText = ((double)value).ToString();
+                }
+
+            }
+        }
 
 
     }

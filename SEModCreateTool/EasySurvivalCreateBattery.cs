@@ -74,8 +74,9 @@ namespace SEModCreateTool
 
             //対象SubtypeIdをリストアップ
             var tgIds = new SortedDictionary<string, bool>();
-            tgIds.Add("OxygenGenerator\t", true);
-            tgIds.Add("OxygenGenerator\tOxygenGeneratorSmall", true);
+            tgIds.Add("BatteryBlock\tLargeBlockBatteryBlock", true);
+            tgIds.Add("BatteryBlock\tSmallBlockBatteryBlock", true);
+            tgIds.Add("BatteryBlock\tSmallBlockSmallBatteryBlock", true);
 
 
             //CubeBlocks
@@ -116,30 +117,33 @@ namespace SEModCreateTool
                     //要素を取り込み
                     XmlNode nodeCubeBlock = dstXmlDoc.ImportNode(node, true);
 
-
-
-                    XmlNodeList? nodeListIceToGasRatio = nodeCubeBlock.SelectNodes("ProducedGases/GasInfo/IceToGasRatio");
-                    if (nodeListIceToGasRatio == null || nodeListIceToGasRatio.Count <= 0)
+                    //InitialStoredPowerRatio
                     {
-                        continue;
+                        string xPath = @"InitialStoredPowerRatio";
+                        string value = @"1.0";
+                        this.ChangeValue(nodeCubeBlock, xPath, value);
+                    }
+                    ////MaxPowerOutput
+                    //{
+                    //    string xPath = @"MaxPowerOutput";
+                    //    this.ChangeValue(nodeCubeBlock, xPath, factor);
+                    //}
+                    ////RequiredPowerInput
+                    //{
+                    //    string xPath = @"RequiredPowerInput";
+                    //    this.ChangeValue(nodeCubeBlock, xPath, factor);
+                    //}
+                    //MaxStoredPower
+                    {
+                        string xPath = @"MaxStoredPower";
+                        this.ChangeValue(nodeCubeBlock, xPath, factor);
+                    }
+                    //RechargeMultiplier
+                    {
+                        string xPath = @"RechargeMultiplier";
+                        this.ChangeValue(nodeCubeBlock, xPath, factor);
                     }
 
-                    //出力週を調整
-                    foreach (XmlNode gasRateNode in nodeListIceToGasRatio)
-                    {
-                        string valueText = gasRateNode.InnerText;
-                        if (string.IsNullOrWhiteSpace(valueText))
-                        {
-                            continue;
-                        }
-
-                        decimal gasRate;
-                        if (decimal.TryParse(valueText, out gasRate))
-                        {
-                            gasRate = gasRate * factor;
-                            gasRateNode.InnerText = ((double)gasRate).ToString();
-                        }
-                    }
 
                     //追加
                     nodeCubeBlocks.AppendChild(nodeCubeBlock);
@@ -150,9 +154,6 @@ namespace SEModCreateTool
             //XML保存
             dstXmlDoc.Save(dstFile);
         }
-
-
-
 
     }
 }

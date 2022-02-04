@@ -33,11 +33,11 @@ namespace SEModCreateTool
                 easySurvivalCreate.Create(srcPath, dstPath);
             }
 
-            ////Battery
-            //{
-            //    var easySurvivalCreate = new EasySurvivalCreateBattery();
-            //    easySurvivalCreate.Create(srcPath, dstPath);
-            //}
+            //Battery
+            {
+                var easySurvivalCreate = new EasySurvivalCreateBattery();
+                easySurvivalCreate.Create(srcPath, dstPath);
+            }
 
             //Characters
             {

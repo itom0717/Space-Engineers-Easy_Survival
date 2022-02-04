@@ -88,21 +88,6 @@ namespace SEModCreateTool
             srcXmlDoc.Save(dstFile);
         }
 
-        /// <summary>
-        /// valueを変更
-        /// </summary>
-        private void ChangeValue(XmlDocument tgtXmlDoc, string xPath, string value)
-        {
-            XmlNodeList? nodeList = tgtXmlDoc.SelectNodes(xPath);
-            if (nodeList == null || nodeList.Count <= 0)
-            {
-                return;
-            }
 
-            foreach (XmlNode node in nodeList)
-            {
-                node.InnerText = value;
-            }
-        }
     }
 }
