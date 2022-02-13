@@ -45,6 +45,13 @@ namespace SEModCreateTool
                 easySurvivalCreate.Create(srcPath, dstPath);
             }
 
+            //Power
+            {
+                var easySurvivalCreate = new EasySurvivalCreatePower();
+                easySurvivalCreate.Create(srcPath, dstPath);
+            }
+
+
 
         }
     }
