@@ -17,24 +17,57 @@ namespace SEModCreateTool
         /// </summary>
         public override void Create(string srcPath, string dstPath)
         {
-            //読込ファイル
-            string srcFile = System.IO.Path.Combine(srcPath, @"CubeBlocks", @"CubeBlocks_Energy.sbc");
 
             var factorList = new List<decimal>();
             factorList.Add(10.0M);
             factorList.Add(100.0M);
             factorList.Add(1000.0M);
 
-            foreach (decimal factor in factorList)
+
             {
-                string dstFilename = @$"Battery_{factor.ToString("0")}.sbc";
+                //読込ファイル
+                string srcFile = System.IO.Path.Combine(srcPath, @"CubeBlocks", @"CubeBlocks_Energy.sbc");
+
+                //対象SubtypeIdをリストアップ
+                var tgIds = new SortedDictionary<string, bool>();
+                tgIds.Add("BatteryBlock" + "\t" + "LargeBlockBatteryBlock", true);
+                tgIds.Add("BatteryBlock" + "\t" + "SmallBlockBatteryBlock", true);
+                tgIds.Add("BatteryBlock" + "\t" + "SmallBlockSmallBatteryBlock", true);
+
+                foreach (decimal factor in factorList)
+                {
+                    string dstFilename = @$"Battery_{factor.ToString("0")}.sbc";
 #if DEBUG
-                string dstPath1 = @"";
+                    string dstPath1 = @"";
 #else
-                string dstPath1 = @$"Easy_Survival Battery x {factor.ToString("0")}\Data";
+                    string dstPath1 = @$"Easy_Survival Battery x {factor.ToString("0")}\Data";
 #endif
-                this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename, factor);
+                    this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename, factor, tgIds);
+                }
             }
+
+
+            {
+                //読込ファイル
+                string srcFile = System.IO.Path.Combine(srcPath, @"CubeBlocks", @"CubeBlocks_Warfare2.sbc");
+
+                //対象SubtypeIdをリストアップ
+                var tgIds = new SortedDictionary<string, bool>();
+                tgIds.Add("BatteryBlock" + "\t" + "LargeBlockBatteryBlockWarfare2", true);
+                tgIds.Add("BatteryBlock" + "\t" + "SmallBlockBatteryBlockWarfare2", true);
+
+                foreach (decimal factor in factorList)
+                {
+                    string dstFilename = @$"Battery_Warfare2_{factor.ToString("0")}.sbc";
+#if DEBUG
+                    string dstPath1 = @"";
+#else
+                    string dstPath1 = @$"Easy_Survival Battery x {factor.ToString("0")}\Data";
+#endif
+                    this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename, factor, tgIds);
+                }
+            }
+
         }
 
 
@@ -47,7 +80,8 @@ namespace SEModCreateTool
                                string dstPath1,
                                string dstPath2,
                                string dstFilename,
-                               decimal factor)
+                               decimal factor,
+                               SortedDictionary<string, bool> tgIds)
         {
             //出力ファイル
             string dstFile = this.GetDestinationFile(dstPath1, dstPath2, dstFilename);
@@ -72,11 +106,7 @@ namespace SEModCreateTool
                 return;
             }
 
-            //対象SubtypeIdをリストアップ
-            var tgIds = new SortedDictionary<string, bool>();
-            tgIds.Add("BatteryBlock\tLargeBlockBatteryBlock", true);
-            tgIds.Add("BatteryBlock\tSmallBlockBatteryBlock", true);
-            tgIds.Add("BatteryBlock\tSmallBlockSmallBatteryBlock", true);
+
 
 
             //CubeBlocks
@@ -123,16 +153,7 @@ namespace SEModCreateTool
                         string value = @"1.0";
                         this.ChangeValue(nodeCubeBlock, xPath, value);
                     }
-                    ////MaxPowerOutput
-                    //{
-                    //    string xPath = @"MaxPowerOutput";
-                    //    this.ChangeValue(nodeCubeBlock, xPath, factor);
-                    //}
-                    ////RequiredPowerInput
-                    //{
-                    //    string xPath = @"RequiredPowerInput";
-                    //    this.ChangeValue(nodeCubeBlock, xPath, factor);
-                    //}
+ 
                     //MaxStoredPower
                     {
                         string xPath = @"MaxStoredPower";

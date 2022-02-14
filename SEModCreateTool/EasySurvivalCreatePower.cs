@@ -99,6 +99,30 @@ namespace SEModCreateTool
             }
 
 
+            //読込ファイル
+            srcFile = System.IO.Path.Combine(srcPath, @"CubeBlocks", @"CubeBlocks_Warfare2.sbc");
+
+            //Reactor
+            {
+                var tgIds = new SortedDictionary<string, bool>();
+                tgIds.Add("Reactor" + "\t" + "LargeBlockSmallGeneratorWarfare2", true);
+                tgIds.Add("Reactor" + "\t" + "LargeBlockLargeGeneratorWarfare2", true);
+                tgIds.Add("Reactor" + "\t" + "SmallBlockSmallGeneratorWarfare2", true);
+                tgIds.Add("Reactor" + "\t" + "SmallBlockLargeGeneratorWarfare2", true);
+
+                foreach (decimal factor in factorList)
+                {
+                    string dstFilename = @$"Reactor_Warfare2_{factor.ToString("0")}.sbc";
+#if DEBUG
+                    string dstPath1 = @"";
+#else
+                    string dstPath1 = @$"Easy_Survival Power x {factor.ToString("0")}\Data";
+#endif
+                    this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename, factor, tgIds);
+                }
+            }
+
+
 
         }
 
