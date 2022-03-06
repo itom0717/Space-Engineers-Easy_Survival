@@ -19,15 +19,34 @@ namespace SEModCreateTool
         {
             //読込ファイル
             string srcFile = System.IO.Path.Combine(srcPath, @"Characters.sbc");
+            var factorList = new List<decimal>();
+            factorList.Add(10.0M);
+            factorList.Add(100.0M);
 
 
-                string dstFilename = @$"EasyCharacters.sbc";
+//            string dstFilename = @$"EasyCharacters_100.sbc";
+//#if DEBUG
+//            string dstPath1 = @"";
+//#else
+//            string dstPath1 = @$"Easy_Survival Character x 100\Data";
+//#endif
+//            this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename);
+
+
+
+            foreach (decimal factor in factorList)
+            {
+                string dstFilename = @$"EasyCharacters_{factor.ToString("0")}.sbc";
 #if DEBUG
                 string dstPath1 = @"";
 #else
-                string dstPath1 = @$"Easy_Survival Character\Data";
+                    string dstPath1 = @$"Easy_Survival Character x {factor.ToString("0")}\Data";
 #endif
-                this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename);
+                this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename, factor);
+            }
+
+
+
         }
 
         /// <summary>
@@ -38,7 +57,8 @@ namespace SEModCreateTool
         private void CreateSbc(string srcFile,
                                string dstPath1,
                                string dstPath2,
-                               string dstFilename)
+                               string dstFilename,
+                               decimal factor)
         {
             //出力ファイル
             string dstFile = this.GetDestinationFile(dstPath1, dstPath2, dstFilename);
@@ -49,8 +69,8 @@ namespace SEModCreateTool
             //InventoryVolume
             {
                 string xPath = @"/Definitions/Characters/Character/Inventory/InventoryVolume";
-                string value = @"40";
-                this.ChangeValue(srcXmlDoc, xPath, value);
+                //string value = @"40";
+                this.ChangeValue(srcXmlDoc, xPath, factor);
             }
 
             //Hydrogen suit MaxCapacity
@@ -81,8 +101,6 @@ namespace SEModCreateTool
                 string value = @"0.1";
                 this.ChangeValue(srcXmlDoc, xPath, value);
             }
-
-     
 
             //XML保存
             srcXmlDoc.Save(dstFile);
