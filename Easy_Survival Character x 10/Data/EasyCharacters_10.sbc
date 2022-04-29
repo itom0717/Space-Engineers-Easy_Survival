@@ -8,6 +8,7 @@
       </Id>
       <Name>Default_Astronaut</Name>
       <Model>Models\Characters\Astronaut\SE_astronaut.mwm</Model>
+      <Gender>Male</Gender>
       <Mass>100</Mass>
       <ReflectorTexture>Textures\Lights\reflector.dds</ReflectorTexture>
       <LeftGlare>GlareHeadlight</LeftGlare>
@@ -408,6 +409,7 @@
       </Id>
       <Name>Default_Astronaut_Female</Name>
       <Model>Models\Characters\Astronaut\Female\SE_astronaut.mwm</Model>
+      <Gender>Female</Gender>
       <Mass>100</Mass>
       <ReflectorTexture>Textures\Lights\reflector.dds</ReflectorTexture>
       <LeftGlare>GlareHeadlight</LeftGlare>
