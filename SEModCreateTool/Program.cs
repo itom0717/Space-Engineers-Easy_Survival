@@ -1,7 +1,7 @@
 ﻿
 string srcPath = @"D:\SteamLibrary\steamapps\common\SpaceEngineers\Content\Data";
 #if DEBUG
-string dstPath = @"C:\Users\itom\OneDrive\Source\repos\Space Engineers\TEST";
+string dstPath = @"C:\Users\itom\OneDrive\Source\Space Engineers\Easy_Survival_test";
 #else
 string dstPath = @"C:\Users\itom\OneDrive\Source\Space Engineers\Easy_Survival";
 #endif
