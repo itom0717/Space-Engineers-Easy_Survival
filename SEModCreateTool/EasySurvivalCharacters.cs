@@ -22,15 +22,7 @@ namespace SEModCreateTool
             var factorList = new List<decimal>();
             factorList.Add(10.0M);
             factorList.Add(100.0M);
-
-
-//            string dstFilename = @$"EasyCharacters_100.sbc";
-//#if DEBUG
-//            string dstPath1 = @"";
-//#else
-//            string dstPath1 = @$"Easy_Survival Character x 100\Data";
-//#endif
-//            this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename);
+            factorList.Add(1000.0M);
 
 
 
@@ -69,7 +61,6 @@ namespace SEModCreateTool
             //InventoryVolume
             {
                 string xPath = @"/Definitions/Characters/Character/Inventory/InventoryVolume";
-                //string value = @"40";
                 this.ChangeValue(srcXmlDoc, xPath, factor);
             }
 
