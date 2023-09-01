@@ -29,7 +29,7 @@
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>StoneOreToIngotBasic</SubtypeId>
+        <SubtypeId>Position0010_StoneOreToIngotBasic</SubtypeId>
       </Id>
       <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
       <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
