@@ -79,7 +79,8 @@ namespace SEModCreateTool
 
             //対象SubtypeIdをリストアップ
             var tgtSubtypeId = new SortedDictionary<string, bool>();
-            tgtSubtypeId.Add("StoneOreToIngotBasic", isQuantityOnly);
+            //tgtSubtypeId.Add("StoneOreToIngotBasic", isQuantityOnly);
+            tgtSubtypeId.Add("Position0010_StoneOreToIngotBasic", isQuantityOnly);
             tgtSubtypeId.Add("StoneOreToIngot", isQuantityOnly);
             tgtSubtypeId.Add("IronOreToIngot", true);
             tgtSubtypeId.Add("NickelOreToIngot", true);
