@@ -57,8 +57,8 @@
       <DestroySound>WepSmallWarheadExpl</DestroySound>
       <PCU>15</PCU>
       <IsAirTight>true</IsAirTight>
-      <MirroringZ>Y</MirroringZ>
-      <MirroringY>Z</MirroringY>
+      <MirroringX>Y</MirroringX>
+      <MirroringY>X</MirroringY>
       <TargetingGroups>
         <string>PowerSystems</string>
       </TargetingGroups>

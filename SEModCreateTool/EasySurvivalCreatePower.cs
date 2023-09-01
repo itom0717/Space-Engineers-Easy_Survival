@@ -124,6 +124,51 @@ namespace SEModCreateTool
 
 
 
+            //読込ファイル
+            srcFile = System.IO.Path.Combine(srcPath, @"CubeBlocks", @"CubeBlocks_DecorativePack3.sbc");
+
+            //Reactor
+            {
+                var tgIds = new SortedDictionary<string, bool>();
+                tgIds.Add("WindTurbine" + "\t" + "LargeBlockWindTurbineReskin", true);
+
+                foreach (decimal factor in factorList)
+                {
+                    string dstFilename = @$"WindTurbine_Warfare3_{factor.ToString("0")}.sbc";
+#if DEBUG
+                    string dstPath1 = @"";
+#else
+                    string dstPath1 = @$"Easy_Survival Power x {factor.ToString("0")}\Data";
+#endif
+                    this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename, factor, tgIds);
+                }
+            }
+
+            //読込ファイル
+            srcFile = System.IO.Path.Combine(srcPath, @"CubeBlocks", @"CubeBlocks_DecorativePack3.sbc");
+
+            //Reactor
+            {
+                var tgIds = new SortedDictionary<string, bool>();
+                tgIds.Add("SolarPanel" + "\t" + "LargeBlockColorableSolarPanel", true);
+                tgIds.Add("SolarPanel" + "\t" + "LargeBlockColorableSolarPanelCorner", true);
+                tgIds.Add("SolarPanel" + "\t" + "LargeBlockColorableSolarPanelCornerInverted", true);
+                tgIds.Add("SolarPanel" + "\t" + "SmallBlockColorableSolarPanel", true);
+                tgIds.Add("SolarPanel" + "\t" + "SmallBlockColorableSolarPanelCorner", true);
+                tgIds.Add("SolarPanel" + "\t" + "SmallBlockColorableSolarPanelCornerInverted", true);
+
+                foreach (decimal factor in factorList)
+                {
+                    string dstFilename = @$"SolarPanel_Warfare3_{factor.ToString("0")}.sbc";
+#if DEBUG
+                    string dstPath1 = @"";
+#else
+                    string dstPath1 = @$"Easy_Survival Power x {factor.ToString("0")}\Data";
+#endif
+                    this.CreateSbc(srcFile, dstPath, dstPath1, dstFilename, factor, tgIds);
+                }
+            }
+
         }
 
 
