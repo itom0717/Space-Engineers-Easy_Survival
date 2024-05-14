@@ -47,7 +47,68 @@
         <Z>-1</Z>
       </PanelOrientation>
       <TwoSidedPanel>true</TwoSidedPanel>
-      <PanelOffset>1.0</PanelOffset>
+      <Pivots>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>-1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>-1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.5</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.5</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.5</X>
+          <Y>1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.5</X>
+          <Y>1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.5</X>
+          <Y>-1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.5</X>
+          <Y>-1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+      </Pivots>
       <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
@@ -102,13 +163,55 @@
       <BuildTimeSeconds>24</BuildTimeSeconds>
       <ResourceSourceGroup>SolarPanels</ResourceSourceGroup>
       <MaxPowerOutput>8</MaxPowerOutput>
+      <!-- When it is Two sided odd - should be on one side, even - on other side -->
+      <Pivots>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.5</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.75</X>
+          <Y>1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.75</X>
+          <Y>1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.75</X>
+          <Y>-1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.75</X>
+          <Y>-1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.50</X>
+          <Y>-1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.50</X>
+          <Y>-1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+      </Pivots>
       <PanelOrientation>
         <X>0</X>
         <Y>0</Y>
         <Z>-1</Z>
       </PanelOrientation>
       <TwoSidedPanel>true</TwoSidedPanel>
-      <PanelOffset>1.0</PanelOffset>
       <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
@@ -169,7 +272,49 @@
         <Z>-1</Z>
       </PanelOrientation>
       <TwoSidedPanel>true</TwoSidedPanel>
-      <PanelOffset>1.0</PanelOffset>
+      <!-- When it is Two sided odd - should be on one side, even - on other side -->
+      <Pivots>
+        <Vector3>
+          <X>0.5</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.5</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.75</X>
+          <Y>1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.75</X>
+          <Y>1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.75</X>
+          <Y>-1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>0.75</X>
+          <Y>-1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.50</X>
+          <Y>-1.33</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-0.50</X>
+          <Y>-1.33</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+      </Pivots>
       <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
@@ -229,7 +374,69 @@
         <Z>-1</Z>
       </PanelOrientation>
       <TwoSidedPanel>true</TwoSidedPanel>
-      <PanelOffset>1.0</PanelOffset>
+      <!-- When it is Two sided odd - should be on one side, even - on other side -->
+      <Pivots>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>-3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>-3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>-3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>-3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+      </Pivots>
       <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
@@ -290,7 +497,48 @@
         <Z>-1</Z>
       </PanelOrientation>
       <TwoSidedPanel>true</TwoSidedPanel>
-      <PanelOffset>1.0</PanelOffset>
+      <Pivots>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.875</X>
+          <Y>3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.875</X>
+          <Y>3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.875</X>
+          <Y>-3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.875</X>
+          <Y>-3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>-3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>-3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+      </Pivots>
       <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
@@ -345,6 +593,48 @@
       <BuildTimeSeconds>14</BuildTimeSeconds>
       <ResourceSourceGroup>SolarPanels</ResourceSourceGroup>
       <MaxPowerOutput>2</MaxPowerOutput>
+      <Pivots>
+        <Vector3>
+          <X>1.25</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.25</X>
+          <Y>0</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.875</X>
+          <Y>3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.875</X>
+          <Y>3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.875</X>
+          <Y>-3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>1.875</X>
+          <Y>-3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>-3.325</Y>
+          <Z>0</Z>
+        </Vector3>
+        <Vector3>
+          <X>-1.25</X>
+          <Y>-3.325</Y>
+          <Z>-0.5</Z>
+        </Vector3>
+      </Pivots>
       <PanelOrientation>
         <X>0</X>
         <Y>0</Y>
