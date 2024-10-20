@@ -109,7 +109,7 @@
           <Z>-0.5</Z>
         </Vector3>
       </Pivots>
-      <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
       <EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -212,7 +212,7 @@
         <Z>-1</Z>
       </PanelOrientation>
       <TwoSidedPanel>true</TwoSidedPanel>
-      <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
       <EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -315,7 +315,7 @@
           <Z>-0.5</Z>
         </Vector3>
       </Pivots>
-      <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
       <EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -437,7 +437,7 @@
           <Z>-0.5</Z>
         </Vector3>
       </Pivots>
-      <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
       <EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -539,7 +539,7 @@
           <Z>-0.5</Z>
         </Vector3>
       </Pivots>
-      <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
       <EmissiveColorPreset>Default</EmissiveColorPreset>
@@ -642,7 +642,7 @@
       </PanelOrientation>
       <TwoSidedPanel>true</TwoSidedPanel>
       <PanelOffset>1.0</PanelOffset>
-      <DamageEffectName>Damage_Electrical_Damaged_SolarPanels</DamageEffectName>
+      <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
       <DamagedSound>ParticleElectrical</DamagedSound>
       <PhysicalMaterial>GlassOpaque</PhysicalMaterial>
       <EmissiveColorPreset>Default</EmissiveColorPreset>
