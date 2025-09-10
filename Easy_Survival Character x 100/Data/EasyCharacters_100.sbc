@@ -98,6 +98,7 @@
           </Id>
           <MaxCapacity>500</MaxCapacity>
           <Throughput>1000</Throughput>
+          <ReducedOnSpawn>0.2</ReducedOnSpawn>
         </Resource>
         <Resource>
           <Id>
@@ -106,6 +107,7 @@
           </Id>
           <Throughput>1000</Throughput>
           <MaxCapacity>500</MaxCapacity>
+          <ReducedOnSpawn>0.2</ReducedOnSpawn>
         </Resource>
       </SuitResourceStorage>
       <SuitConsumptionInTemperatureExtreme>0.1</SuitConsumptionInTemperatureExtreme>
@@ -401,6 +403,7 @@
       <RecoilJetpackDampeningDegPerS>30</RecoilJetpackDampeningDegPerS>
       <CrouchHeadServerOffset>1.25</CrouchHeadServerOffset>
       <HeadServerOffset>1.4</HeadServerOffset>
+      <ReducedEnergyOnSpawn>0.2</ReducedEnergyOnSpawn>
     </Character>
     <Character>
       <Id>
@@ -501,6 +504,7 @@
           </Id>
           <MaxCapacity>500</MaxCapacity>
           <Throughput>1000</Throughput>
+          <ReducedOnSpawn>0.2</ReducedOnSpawn>
         </Resource>
         <Resource>
           <Id>
@@ -509,6 +513,7 @@
           </Id>
           <Throughput>1000</Throughput>
           <MaxCapacity>500</MaxCapacity>
+          <ReducedOnSpawn>0.2</ReducedOnSpawn>
         </Resource>
       </SuitResourceStorage>
       <SuitConsumptionInTemperatureExtreme>0.1</SuitConsumptionInTemperatureExtreme>
@@ -804,6 +809,7 @@
       <StepSoundInterval>100</StepSoundInterval>
       <AnkleHeightWhileStanding>0.187</AnkleHeightWhileStanding>
       <PhysicalMaterial>CharacterFemale</PhysicalMaterial>
+      <ReducedEnergyOnSpawn>0.2</ReducedEnergyOnSpawn>
     </Character>
   </Characters>
 </Definitions>
