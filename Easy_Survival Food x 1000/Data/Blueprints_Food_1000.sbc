@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0010_CookMammalMeat</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_CookMammalMeat</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\Meat_mammal_cooked.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="MammalMeatRaw" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MammalMeatCooked" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0020_CookSpiderMeat</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_CookSpiderMeat</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\Meat_spider_cooked.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="InsectMeatRaw" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="InsectMeatCooked" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0030_MealPack_KelpCrisp</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_KelpCrisp</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Algae.dds</Icon>
+      <Prerequisites>
+        <Item Amount="4" TypeId="PhysicalObject" SubtypeId="Algae" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_KelpCrisp" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+      <IgnoreEfficiencyMultiplier>true</IgnoreEfficiencyMultiplier>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0040_MealPack_FruitBar</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_FruitBar</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Fruit.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Fruit" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_FruitBar" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0050_MealPack_GardenSlaw</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_GardenSlaw</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Vegetable.dds</Icon>
+      <Prerequisites>
+        <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Fruit" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_GardenSlaw" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0060_MealPack_RedPellets</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_RedPellets</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Fruit.dds</Icon>
+      <Prerequisites>
+        <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Fruit" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_RedPellets" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0070_MealPack_Chili</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Chili</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Vegetable.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Fruit" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Chili" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0080_MealPack_Flatbread</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Flatbread</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Grain.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Fruit" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Flatbread" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0090_MealPack_Ramen</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Ramen</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Algae.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="2" TypeId="PhysicalObject" SubtypeId="Algae" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Ramen" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0100_MealPack_FruitPastry</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_FruitPastry</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Grain.dds</Icon>
+      <Prerequisites>
+        <Item Amount="2" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Fruit" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_FruitPastry" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0110_MealPack_VeggieBurger</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_VeggieBurger</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Mushroom.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_VeggieBurger" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0120_MealPack_Curry</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Curry</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Grain.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Fruit" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Curry" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0130_MealPack_GreenPellets</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_GreenPellets</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Spider.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="2" TypeId="PhysicalObject" SubtypeId="Algae" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="InsectMeatCooked" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_GreenPellets" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0140_MealPack_Dumplings</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Dumplings</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Grain.dds</Icon>
+      <Prerequisites>
+        <Item Amount="2" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Dumplings" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0150_MealPack_Spaghetti</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Spaghetti</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Mushroom.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Spaghetti" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0160_MealPack_Lasagna</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Lasagna</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Meat.dds</Icon>
+      <Prerequisites>
+        <Item Amount="2" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="MammalMeatCooked" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Lasagna" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0170_MealPack_Burrito</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_Burrito</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Meat.dds</Icon>
+      <Prerequisites>
+        <Item Amount="2" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="MammalMeatCooked" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_Burrito" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0180_MealPack_FrontierStew</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_FrontierStew</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Mushroom.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+        <Item Amount="2" TypeId="PhysicalObject" SubtypeId="Algae" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="InsectMeatCooked" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_FrontierStew" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0190_MealPack_SearedSabiroid</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_SearedSabiroid</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Spider.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Algae" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="InsectMeatCooked" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_SearedSabiroid" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0200_MealPack_SteakDinner</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Meal_SteakDinner</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\MealPack_Meat.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Fruit" />
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="MammalMeatCooked" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="ConsumableItem" SubtypeId="MealPack_SteakDinner" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0010_Seeds_Fruit</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Seeds_Fruit</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\SeedPack_Fruit.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Fruit" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="SeedItem" SubtypeId="Fruit" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0020_Seeds_Grain</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Seeds_Grain</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\SeedPack_Grain.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalObject" SubtypeId="Grain" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="SeedItem" SubtypeId="Grain" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0030_Seeds_Vegetables</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Seeds_Vegetables</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\SeedPack_Vegetable.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Vegetables" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="SeedItem" SubtypeId="Vegetables" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Position0040_Spores_Mushrooms</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Blueprint_Spores_Mushrooms</DisplayName>
+      <Icon>Textures\GUI\Icons\Items\SeedPack_Mushroom.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="1000" TypeId="SeedItem" SubtypeId="Mushrooms" />
+      </Results>
+      <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+    </Blueprint>
+  </Blueprints>
+</Definitions>

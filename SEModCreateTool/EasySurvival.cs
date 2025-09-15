@@ -51,7 +51,11 @@ namespace SEModCreateTool
                 easySurvivalCreate.Create(srcPath, dstPath);
             }
 
-
+            //Food
+            {
+                var easySurvivalCreate = new EasySurvivalFood();
+                easySurvivalCreate.Create(srcPath, dstPath);
+            }
 
         }
     }
